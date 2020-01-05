@@ -6,7 +6,7 @@
 #### 中国从2007年的12降低到2017年的8.6
 #### 变化最大的是非洲大陆的部分国家，Angola从2007年48.6降到2017年的25.
 
-### 代码URL如下所示，项目包含6个URL，包括首页、4个跳转交互图表页以及1个地图跳转页。
+### 代码URL如下所示，项目包含5个URL，包括首页、3个跳转交互图表页以及1个地图跳转页。
 本人与一名17级同学组成两人小组，主要负责建立flask框架、将图表导入flask内并使其具有可交互性，以及最后部署到pythonanywhere上。
 ## [pythonanywhere部署URL](http://heyyaqingzhou.pythonanywhere.com)
 ## [Github代码URL](https://github.com/YaQingZhou/python-final)

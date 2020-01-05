@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>表格4</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+<body>
+<div>
+  <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+  <div id="main" style="width: 800px;height:600px;"></div>
+  <script type="text/javascript">
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main'));
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption({{ bar_data3 | safe }});
+  </script>
+</div>
+<h1>世界各国从2000年到2017年的人均GDP变化</h1>
+<form method="POST" action="/world">
+    <select name="the_region_selected2">
+        {% for item in the_select_region2 %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='show' type='SUBMIT'></p>
+</form>
+
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+
+</body>
+</html>

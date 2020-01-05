@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>表格1</title>
+    <!--<link rel="stylesheet" href="static/hf.css">-->
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <style>
+body {
+    background-color:#F9EDED;
+}
+</style>
+</head>
+<body>
+<h1>各国营养不良发生率和地方经济的发展关系</h1>
+
+<form method="POST" action="/raw">
+    <select name="the_region_selected">
+        {% for item in the_select_region %}
+            <option value="{{ item }}">{{ item }}</option>
+        {% endfor %}
+    </select>
+<p><input value='show' type='SUBMIT'></p>
+</form>
+  <!-- 制作按钮 -->
+<form method="GET" action="/new">
+    <p>查看更多表格</p>
+    <p><input value='各国营养不良发生率变化情况' type='SUBMIT'></p>
+</form>
+<form method="GET" action="/MG">
+    <p><input value='各国营养不良发生率' type='SUBMIT'></p>
+</form>
+<form method="GET" action="/world">
+    <p><input value='各国人均GDP变化' type='SUBMIT'></p>
+</form>
+<form method="GET" action="/map">
+    <p><input value='地图' type='SUBMIT'></p>
+</form>
+
+
+
+
+
+{{ the_plot_all|safe }}
+{{ the_res|safe }}
+
+
+</body>
+</html>
